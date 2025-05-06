@@ -64,7 +64,7 @@ uploaded = st.file_uploader('Upload a microstructure image', type=['png','jpg','
 
 if uploaded is not None:
     image = Image.open(uploaded).convert('RGB')
-    st.image(image, caption='Uploaded Image', use_column_width=True)
+    st.image(image, caption='Uploaded Image', use_container_width=True)  # Updated parameter
 
     # Lazy load models
     if 'feat_extractor' not in st.session_state:
